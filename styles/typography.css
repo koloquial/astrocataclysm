@@ -1,0 +1,18 @@
+:root{
+    --font-crimson: "Crimson Text", serif;
+    --text-margin: 0px 0px 10px 0px;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: var(--font-crimson);
+    color: var(--heading);
+    margin: var(--text-margin);
+    cursor: default;
+}
+
+p, li{
+    font-family: var(--font-crimson);
+    color: var(--text);
+    margin: var(--text-margin);
+    cursor: default;
+}

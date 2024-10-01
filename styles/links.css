@@ -1,0 +1,21 @@
+a:link{
+    color: var(--link);
+    text-decoration: none;
+    font-family: var(--crimson);
+}
+
+a:hover{
+    color: var(--hover) !important;
+}
+
+a:active{
+    color: var(--hover);
+}
+
+a:focus{
+    color: var(--hover);
+}
+
+a:visited{
+    color: var(--link);
+}

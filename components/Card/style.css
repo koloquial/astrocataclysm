@@ -1,0 +1,125 @@
+:root{
+    --card-text: #e9e6e6;
+}
+
+.card-container{
+    display: inline-block;
+    width: calc(750px / 2.5);
+    height: calc(1050px / 2.5);
+    border: 5px solid black;
+    border-radius: 10px;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.card-name, .card-rarity-type, .card-abilities, .card-footer{
+    width: 100%;
+    text-align: left;
+    color: var(--card-text);
+    font-family: var(--font-crimson);
+    padding: 2px 0px 2px 5px;
+    text-shadow: black 1px 1px;
+}
+
+.card-abilities{
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 5px 20px 5px;
+}
+
+.Void{
+    background-color: rgba(0, 0, 0, .3);
+    border-top: 1px solid black;
+}
+
+.Symbiote{
+    background-color: rgba(0, 119, 36, 0.3);
+    border-top: 1px solid rgba(0, 119, 36, 0.3);
+}
+
+.Hive{
+    background-color: rgba(119, 107, 0, 0.3);
+    border-top: 1px solid rgba(119, 107, 0, 0.3);
+}
+
+.Earthborn{
+    background-color: rgba(0, 12, 119, 0.3);
+    border-top: 1px solid rgba(0, 119, 36, 0.3);
+}
+
+.Dominion{
+    background-color: rgba(119, 0, 44, 0.3);
+    border-top: 1px solid rgba(119, 0, 44, 0.3);
+}
+
+.card-ability-description{
+    font-size: 14px;
+}
+
+.card-ability-name{
+    font-style: italic;
+    font-size: 14px;
+}
+
+.card-image{
+    z-index: 1;
+    position: absolute;
+}
+
+.card-name{
+    position: relative;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.card-rarity-type{
+    font-size: 12px;
+}
+
+.card-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.holographic {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+.holographic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 150, .5), rgba(0, 204, 255, .5), transparent);
+    opacity: 0.1;
+    mix-blend-mode: multiply;
+    pointer-events: none; 
+    animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
